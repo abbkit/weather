@@ -27,21 +27,21 @@ CREATE TABLE `t_weather` (
 ## design pattern
 1. observe pattern 
    - WeatherObserverImpl as a observer that observes any change on the weather observable
-     - WeatherObservable as a observable , registers all observers that implements 'com.abbkit.tmp.weather.op.WeatherObserver' interface
+   - WeatherObservable as a observable , registers all observers that implements 'com.abbkit.tmp.weather.op.WeatherObserver' interface
    
-        ```
-          @Autowired
-          public void observer(List<WeatherObserver> weatherObserverList){
-               for (WeatherObserver weatherObserver : weatherObserverList) {
-                     addObserver(weatherObserver);
-               }
-          }
+      ```
+        @Autowired
+        public void observer(List<WeatherObserver> weatherObserverList){
+             for (WeatherObserver weatherObserver : weatherObserverList) {
+                   addObserver(weatherObserver);
+             }
+        }
       
-            public void stream(WeatherEntity weatherEntity){
-                  setChanged();
-                  notifyObservers(weatherEntity);
-            }
-          ```
+        public void stream(WeatherEntity weatherEntity){
+             setChanged();
+             notifyObservers(weatherEntity);
+        }
+        ```
 
 ## env
 1. mysql
