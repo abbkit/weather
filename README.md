@@ -17,8 +17,8 @@ CREATE TABLE `t_weather` (
 1.  a no-unique index on rec_time
 
 ## weather-server
-1. GET  :  /weather/insert  receive weather information from a station
-2. POST : /weather/reportMin report weather information in each minute
+1. GET  :  **/weather/insert** , receive weather information from a station
+2. POST : **/weather/reportMin** , report weather information in each minute
 
 ## weather-push-data
 1. generate some weather information randomly, then use http channel to push to the server
