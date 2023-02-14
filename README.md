@@ -44,8 +44,11 @@ CREATE TABLE `t_weather` (
         ```
 
 ## env
-1. mysql
-2. redis
+1. mysql 8.0.23
+2. redis 5.0.9
+3. spring boot + mybatis
+
+
 ## All Service Urls
 1. **http://127.0.0.1:8080/weather/reportMin**  weather report in each minute
     ```
