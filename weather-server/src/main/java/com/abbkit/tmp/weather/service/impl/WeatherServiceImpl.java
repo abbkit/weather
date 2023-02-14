@@ -28,7 +28,7 @@ public class WeatherServiceImpl implements WeatherService {
     }
 
     @Override
-    public List<WeatherEntity> recListPerMin() {
+    public List<WeatherEntity> reportMin() {
 
         String key = "report";
         String report = stringRedisTemplate.opsForValue().get(key);
@@ -39,9 +39,9 @@ public class WeatherServiceImpl implements WeatherService {
                 if(StringUtils.isNotEmpty(report)) {
                     return JSONUtil.toList(report, WeatherEntity.class);
                 }
-                List<WeatherEntity> entityList = weatherMapper.recPerMin();
+                List<WeatherEntity> entityList = weatherMapper.reportMin();
                 String jsonStr = JSONUtil.toJsonStr(entityList);
-                stringRedisTemplate.opsForValue().set(key,jsonStr,60, TimeUnit.MINUTES);
+                stringRedisTemplate.opsForValue().set(key,jsonStr,60, TimeUnit.SECONDS);
                 return entityList;
             }
 

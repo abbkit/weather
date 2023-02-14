@@ -16,6 +16,6 @@ public interface WeatherService {
      * get the latest weather information in each minute.
      * @return
      */
-    List<WeatherEntity> recListPerMin();
+    List<WeatherEntity> reportMin();
 
 }

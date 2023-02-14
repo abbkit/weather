@@ -26,6 +26,6 @@ public interface WeatherMapper {
             @Result(column = "rec_time", property = "recTime",jdbcType= JdbcType.TIMESTAMP )
 
     )
-    List<WeatherEntity> recPerMin();
+    List<WeatherEntity> reportMin();
 
 }

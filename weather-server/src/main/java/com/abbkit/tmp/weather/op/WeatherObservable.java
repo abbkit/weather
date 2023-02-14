@@ -19,6 +19,10 @@ public class WeatherObservable extends Observable {
         }
     }
 
+    /**
+     * 接受气象信息
+     * @param weatherEntity
+     */
     public void stream(WeatherEntity weatherEntity){
         setChanged();
         notifyObservers(weatherEntity);

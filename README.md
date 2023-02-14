@@ -46,3 +46,37 @@ CREATE TABLE `t_weather` (
 ## env
 1. mysql
 2. redis
+## All Service Urls
+1. **http://127.0.0.1:8080/weather/reportMin**  weather report in each minute
+    ```
+   [
+    {
+        "id": 112,
+        "temperature": 2,
+        "humidity": 48,
+        "pressure": 56.658,
+        "recTime": "2023-02-14 01:48:00",
+        "station": "S4"
+    },
+    {
+        "id": 116,
+        "temperature": 12,
+        "humidity": 21,
+        "pressure": 90.4075,
+        "recTime": "2023-02-14 01:49:00",
+        "station": "S3"
+    }
+    ]
+   
+   ```
+2. **http://127.0.0.1:8080/weather/insert**  log weather in DB
+    ```
+   {
+        "id": 107,
+        "temperature": 22,
+        "humidity": 32,
+        "pressure": 92.4258,
+        "recTime": "2023-02-14 01:18:00",
+        "station": "S4"
+    }
+   ```

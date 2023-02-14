@@ -26,7 +26,7 @@ public class WeatherEntity {
     /**
      * 气压
      */
-    private int pressure;
+    private float pressure;
 
 
     /**
